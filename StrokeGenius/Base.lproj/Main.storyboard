@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sJN-Jl-e39">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -15,7 +16,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79k-lf-wH6">
+                                <rect key="frame" x="20" y="0.0" width="560" height="551"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strokegeniuslogo" translatesAutoresizingMaskIntoConstraints="NO" id="hld-AM-r7m">
+                                        <rect key="frame" x="152" y="30" width="256" height="256"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="256" id="Hth-F6-Wjd"/>
+                                            <constraint firstAttribute="width" constant="256" id="vbg-90-ypq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dq-Wg-lXK">
+                                        <rect key="frame" x="0.0" y="364" width="560" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZr-R7-m1f">
+                                        <rect key="frame" x="0.0" y="392" width="560" height="1"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="sBQ-K6-uEG"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ0-rr-588">
+                                        <rect key="frame" x="156" y="294" width="249" height="58"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="XaN-qG-3no"/>
+                                            <constraint firstAttribute="width" constant="249" id="nDy-gE-sG0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Start Tracking">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jZr-R7-m1f" firstAttribute="leading" secondItem="2Dq-Wg-lXK" secondAttribute="leading" id="1nl-MF-21Z"/>
+                                    <constraint firstItem="jZr-R7-m1f" firstAttribute="bottom" secondItem="2Dq-Wg-lXK" secondAttribute="bottom" id="41i-3s-RXm"/>
+                                    <constraint firstItem="2Dq-Wg-lXK" firstAttribute="top" secondItem="LJ0-rr-588" secondAttribute="bottom" constant="12" id="C5K-W4-Bw0"/>
+                                    <constraint firstItem="hld-AM-r7m" firstAttribute="centerX" secondItem="79k-lf-wH6" secondAttribute="centerX" id="CAC-pS-zRj"/>
+                                    <constraint firstItem="hld-AM-r7m" firstAttribute="centerX" secondItem="LJ0-rr-588" secondAttribute="centerX" id="GtJ-Cp-ede"/>
+                                    <constraint firstItem="2Dq-Wg-lXK" firstAttribute="trailing" secondItem="jZr-R7-m1f" secondAttribute="trailing" id="KTV-J1-TMf"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Dq-Wg-lXK" secondAttribute="bottom" constant="158" id="Msc-aS-NMx"/>
+                                    <constraint firstItem="jZr-R7-m1f" firstAttribute="top" secondItem="LJ0-rr-588" secondAttribute="bottom" constant="40" id="OUH-Xp-bJk"/>
+                                    <constraint firstItem="hld-AM-r7m" firstAttribute="top" secondItem="79k-lf-wH6" secondAttribute="top" constant="30" id="YzU-Ki-7ur"/>
+                                    <constraint firstItem="LJ0-rr-588" firstAttribute="centerX" secondItem="2Dq-Wg-lXK" secondAttribute="centerX" id="eiR-Gr-25Y"/>
+                                    <constraint firstItem="jZr-R7-m1f" firstAttribute="leading" secondItem="79k-lf-wH6" secondAttribute="leading" id="gNd-5z-MdB"/>
+                                    <constraint firstItem="LJ0-rr-588" firstAttribute="top" secondItem="hld-AM-r7m" secondAttribute="bottom" constant="8" symbolic="YES" id="qtW-4D-4ZE"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Dq-Wg-lXK" secondAttribute="trailing" id="zc3-6B-dv4"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="79k-lf-wH6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8D7-bc-bqd"/>
+                            <constraint firstItem="79k-lf-wH6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="FDG-nT-iGW"/>
+                            <constraint firstItem="79k-lf-wH6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fiq-BM-l0I"/>
+                            <constraint firstItem="79k-lf-wH6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j8h-gn-fOB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="sE5-Sq-0y2"/>
                 </viewController>
@@ -101,4 +162,7 @@
             <point key="canvasLocation" x="296" y="1470"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="strokegeniuslogo" width="1024" height="1024"/>
+    </resources>
 </document>
